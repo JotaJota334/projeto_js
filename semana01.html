@@ -11,5 +11,126 @@
     
     <a href="index.html">Voltar</a>
 
+
+
+    <h2>Exercício 01</h2>
+
+    <!-- <script language="JavaScript" type="text/JavaScript">
+
+
+        let num = prompt("Informe número inteiro positivo: ");
+
+        num = parseInt(num);
+
+        while (num <= 0 || isNaN(num)) {
+            num = prompt("Input inválido. Informe número inteiro positivo: ");
+            num = parseInt(num);
+        }
+
+        if (num % 2 == 0) {
+            alert(num + " é par");
+        }
+        else {
+            alert(num + " é ímpar");
+        }
+
+    </script> -->
+
+    <h2>Exercício 02</h2>
+
+    <!-- <script language="JavaScript" type="text/JavaScript">
+
+        let num = prompt("Informe número inteiro positivo: ");
+
+        let cont = 0;
+
+
+        num = parseInt(num);
+
+
+        while (num <= 0 || isNaN(num)) {
+
+            num = prompt("Input inválido. Informe número inteiro positivo: ");
+
+            num = parseInt(num);
+
+        }
+        
+
+        for (i = num; i > 1; i--) {
+
+            if (num % i == 0) {
+                cont ++;
+            }
+
+        }
+
+        if (cont == 1) {
+            document.write("Número primo");
+        }
+        else {
+            document.write("Número não primo");
+        }
+
+    </script> -->
+
+    <h2>Exercício 03</h2>
+
+    <!-- <script language="JavaScript" type="text/JavaScript">
+
+        let num = prompt("Informe número inteiro positivo: ");
+
+        let fatorial = 1;
+
+        num = parseInt(num);
+
+
+        while (num < 0 || isNaN(num)) {
+
+            num = prompt("Input inválido. Informe número inteiro positivo: ");
+
+            num = parseInt(num);
+
+        }
+
+        if (num != 0) {
+
+            fatorial = num;
+
+            for (i = num - 1; i > 1; i--) {
+                fatorial = fatorial * i;
+            }
+        
+        }
+
+        document.write(fatorial);
+
+    </script> -->
+
+    <h2>Exercício 04</h2>
+
+    <script language="JavaScript" type="text/JavaScript">
+
+        let dado = prompt("Informe número inteiro positivo: ");
+
+        let opcao;
+    
+        if (!isNaN(parseInt(dado))) {
+            dado = parseInt(dado);
+        }
+        
+        opcao = prompt("Deseja ver o tipo do dado? ");
+
+        if (opcao == "Sim") {
+            alert(typeof(dado));
+        }
+        else {
+            alert("Obrigado por visitar essa página");
+        }
+
+    </script>
+
+
+
 </body>
 </html>
