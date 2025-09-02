@@ -11,5 +11,84 @@
     
     <a href="index.html">Voltar</a>
 
+
+
+    <h2>Exercício 01</h2>
+
+    <p id="data"></p>
+
+    <script>
+
+        let data = new Date();
+
+        data = new Intl.DateTimeFormat("pt-br", {dateStyle: "full"}).format(data)
+
+        document.getElementById("data").innerHTML = data;
+
+    </script>
+
+
+
+    <h2>Exercício 02</h2>
+
+    <p id="timer"></p>
+
+    <button onclick="parar()">Parar TIMER</button>
+
+    <script>
+
+        const intervalo = setInterval(timer, 1000);
+
+
+        function timer() {
+            let data = new Date();
+            document.getElementById("timer").innerHTML = data.toLocaleTimeString();
+        }
+
+        function parar() {
+            clearInterval(intervalo);
+        }
+
+    </script>
+
+
+
+    <h2>Exercício 3</h2>
+
+    <input type="text" id="input">
+
+    <button onclick="verificar()">Verificar</button>
+
+    <script>
+
+        function verificar() {
+
+            let inputElement = document.getElementById("input").value;
+            
+            inputElement = inputElement.normalize("NFD").replace(/[\u0300-\u036f]/g, '').replace(/[^0-9a-zA-Z]/g, ' ').toUpperCase();
+
+            inputElement = inputElement.split(" ").join("");
+
+            inverseElement = inputElement.split("").reverse().join("");
+
+            if (inputElement == inverseElement) {
+
+                alert("Input é palíndromo");
+            
+            }
+            
+            else {
+            
+                alert("Input não palíndromo");
+            
+            }
+    
+        }
+
+    </script>
+
+
+
+
 </body>
 </html>
