@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 05</title>
+</head>
+<body>
+
+  <div id="app"></div>
+
+    <script>
+    
+
+        const app = document.getElementById('app');
+
+
+        const container = document.createElement('div');
+
+        const title = document.createElement('h2');
+
+        title.textContent = 'Total';
+
+
+        const totalInput = document.createElement('input');
+
+        totalInput.type = 'text';
+
+        totalInput.readOnly = true;
+
+        totalInput.value = '0';
+
+
+        const resetBtn = document.createElement('button');
+
+        resetBtn.textContent = '↻';
+
+
+        let homens = 0;
+
+        let mulheres = 0;
+
+        function updateTotal() {
+
+        totalInput.value = homens + mulheres;
+        
+        homensInput.value = homens;
+
+        mulheresInput.value = mulheres;
+
+        }
+
+
+        const homensSection = document.createElement('div');
+
+        const homensLabel = document.createElement('p');
+
+        homensLabel.textContent = 'Homens';
+
+
+        const homensMais = document.createElement('button');
+
+        homensMais.textContent = '+';
+
+
+        const homensMenos = document.createElement('button');
+
+        homensMenos.textContent = '-';
+
+
+        const homensInput = document.createElement('input');
+
+        homensInput.type = 'text';
+
+        homensInput.readOnly = true;
+
+        homensInput.value = '0';
+
+
+
+        homensMais.onclick = () => {
+
+            homens++;
+        
+            updateTotal();
+
+        };
+
+
+        homensMenos.onclick = () => {
+
+            if (homens > 0) homens--;
+
+            updateTotal();
+
+        };
+
+    
+        const mulheresSection = document.createElement('div');
+
+        const mulheresLabel = document.createElement('p');
+
+        mulheresLabel.textContent = 'Mulheres';
+
+
+        const mulheresMais = document.createElement('button');
+
+        mulheresMais.textContent = '+';
+
+        const mulheresMenos = document.createElement('button');
+
+        mulheresMenos.textContent = '-';
+
+
+        const mulheresInput = document.createElement('input');
+
+        mulheresInput.type = 'text';
+
+        mulheresInput.readOnly = true;
+
+        mulheresInput.value = '0';
+
+
+        mulheresMais.onclick = () => {
+
+            mulheres++;
+
+            updateTotal();
+
+        };
+
+        mulheresMenos.onclick = () => {
+
+            if (mulheres > 0) mulheres--;
+
+            updateTotal();
+
+        };
+    
+
+        resetBtn.onclick = () => {
+
+        homens = 0;
+
+        mulheres = 0;
+
+        updateTotal();
+
+        };
+
+    
+        container.appendChild(title);
+
+        container.appendChild(totalInput);
+
+        container.appendChild(resetBtn);
+
+        homensSection.appendChild(homensMais);
+
+        homensSection.appendChild(homensMenos);
+
+        homensSection.appendChild(homensLabel);
+
+        homensSection.appendChild(homensInput);
+
+        mulheresSection.appendChild(mulheresMais);
+
+        mulheresSection.appendChild(mulheresMenos);
+
+        mulheresSection.appendChild(mulheresLabel);
+
+        mulheresSection.appendChild(mulheresInput);
+
+        container.appendChild(homensSection);
+
+        container.appendChild(mulheresSection);
+
+        app.appendChild(container);
+
+    </script>
+
+</body>
+</html>
